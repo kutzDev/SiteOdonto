@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Poppinsligth;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: PoppinsBlack;
+    src: url(fonts/Poppins-Black.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppinsligth';
+    color: rgb(141, 138, 138);
+}
+
+h1 {
+    font-family: PoppinsBlack;
+    text-align: center;
+    font-size: 100px;
+    transition: 0.3s;
+    color: rgb(26, 26, 26);
+    position: relative;
+    transition: 0.2s;
+}
+
+h1:hover {
+    color: blue;
+}
+
+button {
+    color: #ffffff;
+
+}
+
+.header {
+    color: rgb(0, 0, 0);
+}
+
+.header:hover {
+    color: rgb(170, 235, 235);
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}    
+
+.container1 {
+    display: grid;
+    align-items:self-end;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10rem 0rem;
+}
+
+.container2 {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10rem 0rem;
+}
+
+.container3 {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10rem 0rem;
+}

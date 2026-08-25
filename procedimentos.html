@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procedimentos</title>
+<style>
+  :root{
+    --teal: #17b6c4;
+    --navy: #0d2b4e;
+    --navy-dark: #0a2140;
+    --text: #1f2d3a;
+    --muted: #3a4956;
+    --heading: #1f6fd6;
+    --border: #d7dce2;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .phone{
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+  }
+
+  /* ---- Nav ---- */
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  nav span{ cursor: default; }
+  nav .active{ color: var(--text); }
+
+  main{ padding: 16px; }
+
+  /* ---- Intro (hero) block, same as home ---- */
+  .badge{
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  h1{
+    font-size: 21px;
+    line-height: 1.25;
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .lead{
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #6b7785;
+    margin: 0 0 18px;
+  }
+
+  .btn-primary{
+    display: block;
+    width: 100%;
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-primary:hover{ background: var(--navy-dark); }
+
+  .section-title{
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 26px 0 10px;
+  }
+
+  /* ---- Procedure detail card ---- */
+  .card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+  }
+
+  .card + .card{ margin-top: -4px; }
+
+  .tag{
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  .topic{
+    margin-bottom: 18px;
+  }
+  .topic:last-of-type{ margin-bottom: 20px; }
+
+  .topic h2{
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 6px;
+  }
+
+  .topic p{
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .topic ul{
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+
+  .topic ul li{
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .topic ol{
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+
+  .topic ol li{
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .top {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: var(--teal);
+    color: #fff;
+  }
+
+  .top:hover {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: #0a2140;
+    color: #fff;
+  }
+
+  .topstatic {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: #0a2140;
+    color: #fff;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <nav>
+    <a href="index.html" class="top"">Início</a>
+    <a class="topstatic">Procedimentos</a>
+    <a href="agendar.html" class="top">Agendar</a>
+  </nav>
+
+  <main>
+    <span class="badge">Odontologia Humanizada</span>
+
+    <h1>Cuide do seu sorriso com tranquilidade</h1>
+
+    <p class="lead">
+      Entenda cada tratamento de forma simples, tire suas dúvidas e encontre
+      orientações leves e preventivas para o dia a dia.
+    </p>
+
+    <a href="agendar.html" class="btn-primary">Agendar Consulta</a>
+
+    <p class="section-title">Procedimentos mais buscados</p>
+
+    <!-- ================= CÁRIE ================= -->
+    <div class="card">
+      <span class="tag">Cárie</span>
+
+      <div class="topic">
+        <h2>Oque é a cárie?</h2>
+        <p>A cárie dentária é uma doença que provoca a perda de minerais dos dentes. Ela acontece quando as bactérias presentes no biofilme dental utilizam principalmente os açúcares dos alimentos e produzem ácidos que atacam a estrutura do dente. A cárie pode começar de forma discreta e, se não for controlada, pode avançar para camadas mais profundas do dente.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Oque causa a cárie?</h2>
+        <p>A cárie não é causada por apenas um fator. Ela resulta da interação entre vários fatores: bactérias presentes no biofilme dental, consumo frequente de açúcares, higiene bucal inadequada, frequência e tempo de exposição aos ácidos, menor proteção da saliva e características do próprio dente.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Como a cárie e removida?</h2>
+        <p>O tratamento depende do estágio da lesão. Quando existe uma cavidade que precisa de tecido comprometido de acordo com a técnica indicada e preserva o máximo possível da estrutura dental saudável. Depois, o dente é restaurado com um material adequado.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Quando e nescessario fazer canal?</h2>
+        <p>O tratamento de canal pode ser necessário quando a polpa do dente apresenta uma inflamação irreversível ou necrose, geralmente associada a uma cárie profunda, trauma ou outras causas.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Quando e nescessario extrair o dente?</h2>
+        <p>A extração não é a primeira opção quando o dente pode ser tratado e mantido de forma adequada. Ela pode ser indicada quando apresenta uma destruição muito extensa, fratura que impossibilita sua recuperação ou outras condições que tornam inviável sua manutenção.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Como previnir a caries?</h2>
+        <ul>
+          <li>Escovar os dentes com creme dental fluoretado</li>
+          <li>Limpar os dentes diariamente</li>
+          <li>Evitar o consumo frequente de bebidas e alimentos açucarados</li>
+          <li>Manter consultas odontológicas regularmente</li>
+          <li>Não esperar a dor aparecer para procurar atendimento</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h2>Por que tratar a cárie?</h2>
+        <p>A cárie pode evoluir silenciosamente. Quando não tratada, pode causar perda de estrutura dental, sensibilidade, dor, comprometimento da polpa, infecção e, em casos mais avançados, perda do dente. Tratar cedo geralmente significa preservar mais a estrutura dental e evitar tratamentos mais complexos.</p>
+      </div>
+
+      <a href="agendar.html" class="btn-primary">Agendar Consulta</a>
+    </div>
+
+    <!-- ================= LIMPEZA ================= -->
+    <div class="card">
+      <span class="tag">Limpeza</span>
+
+      <div class="topic">
+        <h2>Profilaxia</h2>
+        <p>A limpeza remove o acúmulo de placa e tártaro que a escovação não alcança, além de polir os dentes. É um cuidado preventivo simples e muito importante.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Quando é indicado?</h2>
+        <p>A cada 6 meses, ou quando você nota a gengiva sangrando, mau hálito ou manchas.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Como funciona?</h2>
+        <ol>
+          <li>remoção do tartaro com ultrassom</li>
+          <li>raspagem suave das superfícies</li>
+          <li>polimento dos dentes</li>
+          <li>aplicação de flúor</li>
+        </ol>
+      </div>
+
+      <div class="topic">
+        <h2>Pós-tratamento?</h2>
+        <p>Continue a escovação e o fio dental diários. Retorne conforme a orientação.</p>
+      </div>
+
+      <a href="agendar.html" class="btn-primary">Agendar Consulta</a>
+    </div>
+
+    <!-- ================= CLAREAMENTO ================= -->
+    <div class="card">
+      <span class="tag">Clareamento dental</span>
+
+      <div class="topic">
+        <h2>O que é?</h2>
+        <p>O clareamento dental é um procedimento realizado para deixar os dentes naturais mais claros, reduzindo manchas e alterações de cor. Ele é feito com produtos clareadores à base de peróxidos que ajudam a quebrar as moléculas responsáveis pela pigmentação dos dentes.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Como é feito no consultório?</h2>
+        <p>Antes do procedimento, o dentista avalia a saúde dos dentes e da gengiva. Em seguida, protege a gengiva e os tecidos da boca e aplica o gel clareador sobre os dentes. O produto permanece em contato com os dentes durante um período determinado pelo dentista. Ao final o gel é removido e os dentes são avaliados.</p>
+      </div>
+
+      <div class="topic">
+        <h2>O resultado aparece na hora?</h2>
+        <p>Pode ser possível perceber uma mudança de cor já após a primeira sessão, mas o resultado varia de pessoa para pessoa e depende da causa e do grau de escurecimento dos dentes.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Quanto tempo dura?</h2>
+        <p>O resultado não é permanente. A duração varia de acordo com hábitos alimentares, higiene bucal, consumo de alimentos e bebidas pigmentadas e características individuais.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Clareamento causa sensibilidade?</h2>
+        <p>Pode causar sensibilidade temporária em algumas pessoas. Caso isso aconteça, o dentista pode ajustar o tratamento ou orientar medidas para diminuir o desconforto.</p>
+      </div>
+
+      <div class="topic">
+        <h2>O que devo evitar depois?</h2>
+        <p>É recomendado ter cuidado com o consumo de alimentos e bebidas que podem pigmentar os dentes, como café, chá escuro, vinho tinto, refrigerantes escuros e alimentos com muitos corantes.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Todo mundo pode fazer?</h2>
+        <p>Não. Antes de realizar o clareamento, é importante passar por uma avaliação odontológica. Cáries, problemas gengivais e outras alterações precisam ser avaliadas e, quando necessário, tratadas antes do procedimento.</p>
+      </div>
+
+      <div class="topic">
+        <h2>Importante!</h2>
+        <p>O clareamento não substitui a higienização!</p>
+      </div>
+
+      <a href="agendar.html" class="btn-primary">Agendar Consulta</a>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

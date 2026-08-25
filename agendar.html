@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar Consulta</title>
+<style>
+  :root{
+    --teal: #17b6c4;
+    --navy: #0d2b4e;
+    --navy-dark: #0a2140;
+    --text: #1f2d3a;
+    --muted: #6b7785;
+    --label: #2f6fb0;
+    --border: #d7dce2;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .phone{
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+  }
+
+  /* ---- Nav ---- */
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  nav span{ cursor: default; }
+  nav .active{ color: var(--text); }
+
+  main{ padding: 18px 16px 24px; }
+
+  h1{
+    font-size: 19px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .lead{
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  label{
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--label);
+    margin-bottom: 6px;
+  }
+
+  input, select, textarea{
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text);
+  }
+
+  input::placeholder, textarea::placeholder{
+    color: #9aa3ac;
+  }
+
+  select{
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%231f2d3a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 11px 8px;
+    padding-right: 32px;
+    color: var(--text);
+  }
+  select:invalid{ color: #9aa3ac; }
+
+  textarea{
+    resize: vertical;
+    min-height: 78px;
+  }
+
+  input:focus, select:focus, textarea:focus{
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 2px rgba(23,182,196,0.18);
+  }
+
+  .btn-primary{
+    display: block;
+    width: 100%;
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  .btn-primary:hover{ background: var(--navy-dark); }
+
+  .top {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: var(--teal);
+    color: #fff;
+  }
+
+  .top:hover {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: #0a2140;
+    color: #fff;
+  }
+
+  .topstatic {
+    padding: 0.7em 0.7em;
+    border-radius: 0.5em;
+    background: #0a2140;
+    color: #fff;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <nav>
+    <a href="index.html" class="top">Início</a>
+    <a href="procedimentos.html" class="top">Procedimentos</a>
+    <a class="topstatic">Agendar</a>
+  </nav>
+
+  <main>
+    <h1>Agendar Consulta</h1>
+    <p class="lead">Escolha o procedimento, o dentista e o melhor horário para você.</p>
+
+    <form>
+      <div>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+      </div>
+
+      <div>
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(##) ####-####">
+      </div>
+
+      <div>
+        <label for="procedimento">Procedimento</label>
+        <select id="procedimento" name="procedimento" required>
+          <option value="" selected disabled>Escolha um procedimento</option>
+          <option value="restauracao">Restauração (Extração de cárie)</option>
+          <option value="clareamento">Clareamento dental</option>
+          <option value="limpeza">Limpeza (profilaxia)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="dentista">Dentista</label>
+        <select id="dentista" name="dentista" required>
+          <option value="" selected disabled>Escolha um dentista</option>
+          <option value="dr-a">Dra. Layla Cristine</option>
+          <option value="dr-b">Dra. Moniky Hevely</option>
+          <option value="dr-b">Dr. Pedro Henrique Rosseto</option>
+          <option value="dr-b">Dr. Robert Henrique Matos</option>
+          <option value="dr-b">Dr. Guilherme Barcelos Badaró</option>
+          <option value="dr-b">Dra. Olivia Caetano</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="data">Data</label>
+        <input type="text" id="data" name="data" placeholder="dd/mm/aaaa">
+      </div>
+
+      <div>
+        <label for="horario">Horário</label>
+        <input type="text" id="horario" name="horario" placeholder="Escolha um horário">
+      </div>
+
+      <div>
+        <label for="observacoes">Observações (opcional)</label>
+        <textarea id="observacoes" name="observacoes" placeholder="Conte algo que ajude no seu procedimento"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+    </form>
+  </main>
+</div>
+
+</body>
+</html>
